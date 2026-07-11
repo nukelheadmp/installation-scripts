@@ -1,5 +1,6 @@
 passbolt:
   plugin: "passbolt.passbolt_lookup.passbolt_lookup"
+  # Put your Passbolt account kit and passphrase here, then vault encrypt this file
   account_kit:
   passphrase: ""
 ansible_user: "{{ lookup(passbolt.plugin, passbolt_uuid).username }}"
