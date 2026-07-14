@@ -46,4 +46,4 @@ source $HOME/.bashrc
 $EDITOR $ANSIBLE_VAULTS/vault_passbolt.yml
 
 echo "Install Juniper Collection"
-ansible-galaxy collection install juniper.device ansible.netcommon
+ansible-galaxy collection install juniper.device
