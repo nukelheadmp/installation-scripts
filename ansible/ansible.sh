@@ -27,8 +27,7 @@ echo "Set up python environment"
 python3 -m venv $PYENV_PATH/ansible
 source $PYENV_PATH/ansible/bin/activate
 pip install -r passbolt/passbolt_lookup/requirements.txt
-pip install pywinrm
-pip install ncclient
+pip install pywinrm ncclient jxmlease xmltodict
 
 echo "Install Passbolt plugin"
 ansible-galaxy collection install ./passbolt --force
@@ -45,3 +44,6 @@ cp $PROJECTSDIR/installation-scripts/ansible/bashrc.d/* $HOME/.bashrc.d
 source $HOME/.bashrc
 
 $EDITOR $ANSIBLE_VAULTS/vault_passbolt.yml
+
+echo "Install Juniper Collection"
+ansible-galaxy collection install juniper.device ansible.netcommon
