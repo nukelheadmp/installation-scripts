@@ -28,6 +28,7 @@ python3 -m venv $PYENV_PATH/ansible
 source $PYENV_PATH/ansible/bin/activate
 pip install -r passbolt/passbolt_lookup/requirements.txt
 pip install pywinrm
+pip install ncclient
 
 echo "Install Passbolt plugin"
 ansible-galaxy collection install ./passbolt --force

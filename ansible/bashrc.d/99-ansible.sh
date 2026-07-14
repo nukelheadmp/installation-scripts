@@ -57,3 +57,4 @@ _ansible-passbolt() {
 }
 
 ansible-servers() { _ansible-passbolt servers "$@"; }
+ansible-network() { _ansible-passbolt network "$@"; }
