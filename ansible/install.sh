@@ -7,9 +7,10 @@ if [[ -z ${ANSIBLE_VAULTS:-} ]]; then
   echo "Setting required variables"
   export ANSIBLE_VAULTS=$HOME/.ansible/vaults
   export PYENV_PATH=$HOME/.local/lib/python
-  echo "Install environment conf files"
-  cp $HOME/.local/share/app-configs/ansible/environment.d/* $HOME/.config/environment.d/
 fi
+
+echo "Install environment conf files"
+cp $HOME/.local/share/app-configs/ansible/environment.d/* $HOME/.config/environment.d/
 
 echo "Add bash functions"
 if [[ ! -d $HOME/.bashrc.d ]]; then
