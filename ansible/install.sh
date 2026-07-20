@@ -10,6 +10,7 @@ if [[ -z ${ANSIBLE_VAULTS:-} ]]; then
 fi
 
 echo "Install environment conf files"
+mkdir -p $HOME/.config/environment.d/
 cp $HOME/.local/share/app-configs/ansible/environment.d/* $HOME/.config/environment.d/
 
 echo "Add bash functions"
